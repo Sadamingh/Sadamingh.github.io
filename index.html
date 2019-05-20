@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<script async="" src="//www.google-analytics.com/analytics.js"></script>
+	<script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script>
 	<head>
 		<meta charset="utf-8">
 		<title>第一个尝试</title>
+		<script type="text/javascript" src="./cannon.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<style type="text/css">
+	      html, body {
+	        background: rgb(251,202,203);
+	        background: -moz-linear-gradient(top, rgba(251,202,203,0) 0%, rgba(247,150,151,0) 100%);
+	        background: -webkit-linear-gradient(top, rgba(251,202,203,0) 0%,rgba(247,150,151,0) 100%);
+	        background: linear-gradient(to bottom, rgba(251,202,203,0) 0%,rgba(247,150,151,0) 100%);
+	        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbcacb', endColorstr='#f79697',GradientType=0 );
+      	}</style>
 	</head>
 
 	<body class=" osx desktop chrome  portrait">
@@ -20,6 +30,65 @@
 	    </div>
 
 	    <div id="footer" style="background-color:#1e1e1e;clear:both;text-align:center;"> 版权 © Sadamingh.github.io</div>
+		
+		<script>
+	      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	      ga('create', 'UA-72599065-3', 'auto');
+	      ga('send', 'pageview');
+	    </script>
+
+		<script type="text/javascript">
+	      // AudioContext support
+	      var _audioctx = true;
+
+	      try {
+	        if (typeof AudioContext !== 'undefined') {
+	          _audioctx = new AudioContext();
+	        } else if (typeof webkitAudioContext !== 'undefined') {
+	          _audioctx = new webkitAudioContext();
+	        } else {
+	          _audioctx = false;
+	        }
+	      } catch(e) {
+	        _audioctx = false;
+	      }
+
+	      // Canvas support
+	      var elem = document.createElement('canvas')
+	      var canvas_support = !!(elem.getContext && elem.getContext('2d'))
+
+	      // WebGL Support
+	      var webgl_support = true
+	      var canvas = document.createElement('canvas');
+	      var supports = 'probablySupportsContext' in canvas ? 'probablySupportsContext' :  'supportsContext';
+	      if (supports in canvas) {
+	        webgl_support = canvas[supports]('webgl') || canvas[supports]('experimental-webgl');
+	      } else {
+	        webgl_support = 'WebGLRenderingContext' in window;
+	      }
+
+	      // Global support
+	      var support = _audioctx && canvas_support && webgl_support
+
+	      if( !support ) {
+	        window.location.href = "/outdated.html"
+	      }
+	    </script>
+		
+		<script src="./main.js"></script>
+
+		<script type="text/javascript">
+	      // prevent scroll on mobile / touchpad
+	      document.addEventListener('touchmove', function(e) {e.preventDefault();}, false);
+
+	      // let's rocks
+	      var app = new App()
+    	</script>
+
+		
 
 	</body>
 
