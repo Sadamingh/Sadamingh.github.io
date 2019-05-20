@@ -48,6 +48,19 @@ section{
     margin: 0 auto;
 }
 
+.mouse-cursor {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.mouse-cursor.disabled {
+  display: none;
+}
+
 hr{
     border: 0; 
     background: #00c3ff; 
@@ -91,11 +104,6 @@ p{
     text-shadow:  1px 5px rgba(0,0,0,0.1);
 }
 
-a{
-    text-decoration: none; 
-    color:inherit;
-}
-
 .cloudfloating
 {
     animation: cloudfloating 120s linear 0s infinite forwards;
@@ -135,4 +143,23 @@ a{
 {
     0%{transform: translateX:(0);}
     100%{transform: translateX(-1920px);}
+}
+
+/**
+* Mouse
+*/
+
+html, body, a {
+  user-select: none;
+  cursor: none !important;
+}
+
+.mouse-cursor span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  border: 2px solid white;
+  border-radius: 50%;
 }
