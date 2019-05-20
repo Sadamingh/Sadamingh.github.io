@@ -10,9 +10,27 @@
 html, body{
     width: 100%;
     font-size: 20px;
-    background: linear-gradient(to bottom, rgba(251,202,203,1) 0%,rgba(247,150,151,1) 100%);
+    background: #333;
 }
 
+button{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 200px;
+    height: 60px;
+    font-size: 15px;
+
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
 
 table{
     cellspacing: 0; 
@@ -23,7 +41,7 @@ section{
     position: relative; 
     display: block; 
     min-width: 1024px; 
-    height:1000px; 
+    height:747px; 
     overflow: hidden; 
     max-width: 1920px; 
     margin: 0 auto;
@@ -42,7 +60,6 @@ section.content-wrap{
 }
 
 section.section-fg{
-    position:absolute; 
     width:100%; height:100%; 
     left:0; top:0;
 }
@@ -124,14 +141,112 @@ p{
 }
 
 #ball {
-     width: 15px;
-     height: 15px;
-     background: none;
-     border: 5px solid white;
-     border-radius: 50%;
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     margin: -10px 0 0 -10px;
-     pointer-events: none;
+    width: 15px;
+    height: 15px;
+    background: none;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    pointer-events: none;
 }
+
+#footer {
+    height: 13px;
+    line-height: 13px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    font-family: Arial;
+    font-size: 5px;
+    letter-spacing: 1px;
+}
+
+.earth {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.earth:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.earth > div {
+  width: 305%;
+  height: 100%;
+  animation: spin 30s linear 0s infinite forwards;
+  background: url(../image/map1.jpg);
+  background-size: cover;
+}
+@keyframes spin {
+  to {
+    transform: translateX(-63.5%);
+  }
+}
+
+button:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+button:hover {
+  background: #025ed6;
+  cursor: pointer;
+}
+
+button:hover:before {
+   transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+button:hover:after {
+   transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}﻿
+
