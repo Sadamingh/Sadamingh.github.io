@@ -49,23 +49,6 @@ section{
     z-index: 0;
 }
 
-.cursor-pointer {
-    cursor: pointer;
-}
-.mouse-cursor {
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 100;
-}
-
-.mouse-cursor.disabled {
-    display: none;
-}
-
 hr{
     border: 0; 
     background: #00c3ff; 
@@ -148,23 +131,4 @@ p{
 {
     0%{transform: translateX:(0);}
     100%{transform: translateX(-1920px);}
-}
-
-/**
-* Mouse
-*/
-
-html, body, a {
-    user-select: none;
-    cursor: none !important;
-}
-
-.mouse-cursor span {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    border: 2px solid white;
-    border-radius: 50%;
 }
