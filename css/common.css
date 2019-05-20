@@ -159,8 +159,8 @@ button{
 
 .line {
       position: relative;
-      top: 100px;
-      left: 500px;
+      top: 100%;
+      left: 240%;
       width: 16em;
       margin: 0 auto;
       border-right: 2px solid rgba(255, 255, 255, 0.75);
