@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mainpage</title>
+      <link rel="stylesheet" href="./css/projects.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+      <div class="wrapper">
+            <header>
+
+                  <nav>
+
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+
+                        <div class="logo">
+                              <img src="./image/icon.png" width="150px" height="68px"></img>
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+                                    <li><a href="index.html">Welcome</a></li>
+                                    <li><a href="main.html">Home</a></li>
+                                    <li><a href="AboutMe.html">About</a></li>
+                                    <li><a href="projects.html">Projects</a></li>
+                                    <li><a href="#">Articals</a></li>
+                                    <li><a href="#">Contact</a></li>
+                              </ul>
+                        </div>
+                  </nav>
+
+                  <div class="pulldown">
+                        <img src="./image/down.png" width="70px" height="66px"></img>
+                  </div>
+
+            </header>
+
+            <div class="content">
+                  <h2>  题目 Title </h2>
+                  <p>
+                        Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.
+                  </p>
+                  <a href="#"> Read More </a><hr>
+
+                  <h2>  Title </h2>
+                  <p>
+                        Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.
+                  </p>
+                  <a href="#"> Read More </a><hr>
+
+                  <h2>  Title </h2>
+                  <p>
+                        Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.
+                  </p>
+                  <a href="#"> Read More </a><hr>
+
+                  <h2>  Title </h2>
+                  <p>
+                        Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.
+                  </p>
+                  <a href="#"> Read More </a><hr>
+
+                  <h2>  Title </h2>
+                  <p>
+                        Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.Hello, here should be something, but I am lazy and I don't
+                        know what to put on here now. Anyway, you must be quite lucky
+                        to find this website, because as you see, I have just made
+                        it recently.
+                  </p>
+                  <a href="#"> Read More </a>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+
+      </script>
+
+</body>
+</html>
