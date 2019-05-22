@@ -13,14 +13,18 @@
       <div class="wrapper">
             <header>
 
-                  <nav>
+                  <div class="pulldown">
+                        <img src="./image/down.png" width="70px" height="66px"></img>
+                  </div>
+
+                  <nav style="z-index:1;">
 
                         <div class="menu-icon">
                               <i class="fa fa-bars fa-2x"></i>
                         </div>
 
                         <div class="logo">
-                              <img src="./image/icon.png" width="150px" height="68px"></img>
+                              <img src="./image/icon_b.png" width="150px" height="68px"></img>
                         </div>
 
                         <div class="menu">
@@ -29,79 +33,61 @@
                                     <li><a href="main.html">Home</a></li>
                                     <li><a href="AboutMe.html">About</a></li>
                                     <li><a href="projects.html">Projects</a></li>
-                                    <li><a href="#">Articals</a></li>
+                                    <li><a href="artical.html">Articles</a></li>
                                     <li><a href="#">Contact</a></li>
                               </ul>
                         </div>
                   </nav>
 
-                  <div class="pulldown">
-                        <img src="./image/down.png" width="70px" height="66px"></img>
-                  </div>
-
             </header>
 
-            <div class="content">
-                  <h2>  题目 Title </h2>
-                  <p>
-                        Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.
-                  </p>
-                  <a href="#"> Read More </a><hr>
+      </div>
 
-                  <h2>  Title </h2>
-                  <p>
-                        Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.
-                  </p>
-                  <a href="#"> Read More </a><hr>
+      <br/><br/>
 
-                  <h2>  Title </h2>
-                  <p>
-                        Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.
-                  </p>
-                  <a href="#"> Read More </a><hr>
+      <div class="wall">
 
-                  <h2>  Title </h2>
-                  <p>
-                        Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.
-                  </p>
-                  <a href="#"> Read More </a><hr>
-
-                  <h2>  Title </h2>
-                  <p>
-                        Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.Hello, here should be something, but I am lazy and I don't
-                        know what to put on here now. Anyway, you must be quite lucky
-                        to find this website, because as you see, I have just made
-                        it recently.
-                  </p>
-                  <a href="#"> Read More </a>
+            <div class="wall-item">
+                  <img src="./image/01.jpg" alt="">
+                  <h2>PROJECT title</h2>
+                  <p>Hello, here should be something, but I am lazy and I don't know what to put on here now. Anyway, you must be quite lucky to find this website, because as you see, I have just made it recently.</p>
             </div>
+
+            <div class="wall-item">
+                  <img src="./image/02.jpg" alt="">
+                  <h2>PROJECT title</h2>
+                  <p>Hello, here should be something, but I am lazy and I don't know what to put on here now. Anyway, you must be quite lucky to find this website, because as you see, I have just made it recently.</p>
+            </div>
+
+            <div class="wall-item">
+                  <img src="./image/03.jpg" alt="">
+                  <h2>PROJECT title</h2>
+                  <p>Hello, here should be something, but I am lazy and I don't know what to put on here now. Anyway, you must be quite lucky to find this website, because as you see, I have just made it recently.</p>
+            </div>
+
+            <div class="wall-item">
+                  <img src="./image/04.jpg" alt="">
+                  <h2>PROJECT title</h2>
+                  <p>Hello, here should be something, but I am lazy and I don't know what to put on here now. Anyway, you must be quite lucky to find this website, because as you see, I have just made it recently.</p>
+            </div>
+
+            <div class="wall-item">
+                  <img src="./image/05.jpg" alt="">
+                  <h2>PROJECT title</h2>
+                  <p>Hello, here should be something, but I am lazy and I don't know what to put on here now. Anyway, you must be quite lucky to find this website, because as you see, I have just made it recently.</p>
+            </div>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script src="./js/jaliswall.js"></script>
+            <script type="text/javascript">
+
+                  $('.wall').jaliswall({
+                        item : '.wall-item',
+                        columnClass : '.wall-column'
+                  });
+
+            </script>
+
       </div>
 
       <script type="text/javascript">
