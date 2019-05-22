@@ -27,6 +27,16 @@ header {
       color: white;
       text-shadow: 2px 2px 2px #000;
       text-align: justify;
+      word-spacing: 0.7px;
+}
+
+.content h1 {
+      margin-bottom: 45px;
+      text-decoration: underline;
+}
+
+.content p {
+      margin-bottom: 0px;
 }
 
 .logo {
