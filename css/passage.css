@@ -12,8 +12,6 @@ body {
 header {
       width: 100%;
       height: 60vh;
-      background: url(../image/07.jpg) no-repeat 50% 50%;
-      background-size: cover;
 }
 
 .content {
