@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-      font-family: "Helvetica Neue",sans-serif;
+      font-family: sans-serif;
       font-weight: lighter;
 }
 
@@ -19,7 +19,7 @@ header {
 .content {
       width: 60%;
       margin: 4em auto;
-      font-size: 20px;
+      font-size: 17px;
       line-height: 30px;
       text-align: justify;
 }
@@ -27,13 +27,14 @@ header {
 .content ol li a:link,a:visited {
       display:block;
       font-weight:bold;
-      color:#5e5e5e;
+      color:#2d38ff;
       text-decoration:none;
 }
 
 .content ol li a:hover,a:active
 {
-      color: #000;
+      color: #2d38ff;
+      text-decoration:none;
 }
 
 .logo {
