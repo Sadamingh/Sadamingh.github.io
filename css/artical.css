@@ -153,3 +153,26 @@ nav ul li a:hover {
 {
       color: #000;
 }
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0px;
+
+}
+
+.pagination li {display: inline;}
+
+.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination li a.active {
+    background-color: #757575;
+    color: white;
+}
+
+.pagination li a:hover:not(.active) {background-color: #ddd;}
