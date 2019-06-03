@@ -1,60 +1,91 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Index Page</title>
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-	</head>
-
-	<body>
-		
-		<main class="main">
-			<section class="info1">
-				<h2>The title</h2>
-				<p>Something need to be put here...</p>
-				<a href="#" class="info-link">Learn More</a>
-			</section>
-		
-			<figure class="figure 1">
-				<img src="./image/r1.jpg" class="figure-img">
-			</figure>
-
-			<figure class="figure 2">
-				<img src="./image/r2.jpg" class="figure-img">
-			</figure>
-
-			<figure class="figure 3">
-				<img src="./image/r3.jpg" class="figure-img">
-			</figure>		
-
-			<figure class="figure 4">
-				<img src="./image/r4.jpg" class="figure-img">
-			</figure>
-
-			<figure class="figure 5">
-				<img src="./image/r5.jpg" class="figure-img">
-			</figure>
-
-			<figure class="figure 6">
-				<img src="./image/r6.jpg" class="figure-img">
-			</figure>	
-
-			<section class="info2">
-				<h2>The title</h2>
-				<p>Something need to be put here...</p>
-				<a href="#" class="info-link">Learn More</a>
-			</section>	
-
-			<figure class="figure 7">
-				<img src="./image/r7.jpg" class="figure-img">
-			</figure>
-
-			<figure class="figure 1">
-				<img src="./image/r8.jpg" class="figure-img">
-			</figure>
-			
-		</main>	
-	</body>
-
-	</html>
+<div style="width: 90%; margin: 10px auto; border: 1px solid #ccc; text-align: center">  
+  
+    <?php  
+  
+    $page=isset($_GET['page'])?$_GET['page']:0;//从零开始  
+  
+    $imgnums = 10;    //每页显示的图片数  
+  
+    $path="./image";   //图片保存的目录  
+  
+    $handle = opendir($path);  
+  
+   
+    $i=0;  
+  
+    while (false !== ($file = readdir($handle))) {  
+  
+       list($filesname,$ext)=explode(".",$file);  
+  
+       if($ext=="gif" or $ext=="jpg" or $ext=="JPG" or $ext=="GIF" ) {  
+  
+           if (!is_dir('./'.$file)) {  
+  
+              $array[]=$file;//保存图片名称  
+  
+              ++$i;  
+  
+           }  
+  
+       }  
+  
+    }  
+  
+  
+    if($array){  
+  
+       rsort($array);//修改日期倒序排序  
+  
+    }  
+  
+  
+    for($j=$imgnums*$page; $j<($imgnums*$page+$imgnums)&&$j<$i; ++$j){  
+  
+       echo '<div>';  
+  
+       echo $array[$j],'<br />';  
+  
+       echo "<img src=".$path."/".$array[$j]."><br />";  
+  
+       echo '</div>';  
+  
+    }  
+  
+  
+    $realpage = @ceil($i / $imgnums) - 1;  
+  
+    $Prepage = $page-1;  
+  
+    $Nextpage = $page+1;  
+  
+    if($Prepage<0){  
+  
+       echo "上一页 ";  
+  
+       echo "<a href=?page=$Nextpage>下一页</a> ";  
+  
+       echo "<a href=?page=$realpage>最末页</a> ";  
+  
+    }elseif($Nextpage >= $realpage){  
+  
+       echo "<a href=?page=0>首页</a> ";  
+  
+       echo " <a href=?page=$Prepage>上一页</a> ";  
+  
+       echo " 下一页";  
+  
+    }else{  
+  
+       echo "<a href=?page=0>首页</a> ";  
+  
+       echo "<a href=?page=$Prepage>上一页</a> ";  
+  
+       echo "<a href=?page=$Nextpage>下一页</a> ";  
+  
+       echo "<a href=?page=$realpage>最末页</a> ";  
+  
+    }  
+  
+    ?>  
+  
+</div>  
