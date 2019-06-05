@@ -1,91 +1,33 @@
-<div style="width: 90%; margin: 10px auto; border: 1px solid #ccc; text-align: center">  
-  
-    <?php  
-  
-    $page=isset($_GET['page'])?$_GET['page']:0;//从零开始  
-  
-    $imgnums = 10;    //每页显示的图片数  
-  
-    $path="./image";   //图片保存的目录  
-  
-    $handle = opendir($path);  
-  
-   
-    $i=0;  
-  
-    while (false !== ($file = readdir($handle))) {  
-  
-       list($filesname,$ext)=explode(".",$file);  
-  
-       if($ext=="gif" or $ext=="jpg" or $ext=="JPG" or $ext=="GIF" ) {  
-  
-           if (!is_dir('./'.$file)) {  
-  
-              $array[]=$file;//保存图片名称  
-  
-              ++$i;  
-  
-           }  
-  
-       }  
-  
-    }  
-  
-  
-    if($array){  
-  
-       rsort($array);//修改日期倒序排序  
-  
-    }  
-  
-  
-    for($j=$imgnums*$page; $j<($imgnums*$page+$imgnums)&&$j<$i; ++$j){  
-  
-       echo '<div>';  
-  
-       echo $array[$j],'<br />';  
-  
-       echo "<img src=".$path."/".$array[$j]."><br />";  
-  
-       echo '</div>';  
-  
-    }  
-  
-  
-    $realpage = @ceil($i / $imgnums) - 1;  
-  
-    $Prepage = $page-1;  
-  
-    $Nextpage = $page+1;  
-  
-    if($Prepage<0){  
-  
-       echo "上一页 ";  
-  
-       echo "<a href=?page=$Nextpage>下一页</a> ";  
-  
-       echo "<a href=?page=$realpage>最末页</a> ";  
-  
-    }elseif($Nextpage >= $realpage){  
-  
-       echo "<a href=?page=0>首页</a> ";  
-  
-       echo " <a href=?page=$Prepage>上一页</a> ";  
-  
-       echo " 下一页";  
-  
-    }else{  
-  
-       echo "<a href=?page=0>首页</a> ";  
-  
-       echo "<a href=?page=$Prepage>上一页</a> ";  
-  
-       echo "<a href=?page=$Nextpage>下一页</a> ";  
-  
-       echo "<a href=?page=$realpage>最末页</a> ";  
-  
-    }  
-  
-    ?>  
-  
-</div>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mainpage</title>
+      <link rel="stylesheet" href="./css/test.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+​
+<div class="artboard">
+<div class="button">
+
+    <div class="links">
+    	<a class="fa fa-github" style="font-size:23px;" target="_blank" href="https://twitter.com/akshaycodes"></a>
+    	<a class="fa fa-linkedin-square" style="font-size:23px;" target="_blank" href="https://medium.com/@akshaycodes"></a>
+    	<a class="fa fa-envelope" style="font-size:23px;" target="_blank" href="https://www.instagram.com/akshaycodes/"></a>
+    	<a class="fa fa-qq" style="font-size:23px;" target="_blank" href="https://codepen.io/akshaycodes/"></a>
+    	<a class="fa fa-share-alt" style="font-size:23px;" target="_blank" href="https://www.youtube.com/channel/UCsDkne96PITsG50KXBoyBzQ"></a>
+    </div>
+
+    <div class="overlay">
+    	<a>Contact Me</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
