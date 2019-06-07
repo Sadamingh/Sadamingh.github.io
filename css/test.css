@@ -1,3 +1,22 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: sans-serif;
+      font-weight: lighter;
+}
+
+
+
+header {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+}
+
 .artboard {
   display: flex;
   align-items: center;
@@ -26,7 +45,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   justify-content: space-evenly;
-  background: #333333;
+  background: rgba(33,33,33,0);
   text-align: center;
   font-weight: bold;
   overflow: hidden;
@@ -73,7 +92,7 @@
   position: absolute;
   top: 0em;
   left: 0em;
-  background: #191919;
+  background: rgba(19,19,19,0.3);
   transition: 1s cubic-bezier(0.89, 0.03, 0.06, 1.5);
 }
 .button .overlay a {
@@ -88,7 +107,7 @@
   padding: 0;
   margin: auto;
   color: #ffffff !important;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .button:hover .links a {
@@ -99,4 +118,179 @@
 .button:hover .overlay {
   -webkit-transform: translateX(-500px);
           transform: translateX(-500px);
+}
+
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.content ol li a:link,a:visited {
+      display:block;
+      font-weight:bold;
+      color:#5e5e5e;
+      text-decoration:none;
+}
+
+.content ol li a:hover,a:active
+{
+      color: #000;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 10px 26px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+.pulldown {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      margin-top: 43%;
+      margin-left: 48%;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+      background-color: rgba(33,33,33,0.5);
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+nav ul li a:hover {
+      text-decoration: underline;
+      text-shadow: 1px 1px 1px white;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+}
+
+.item:hover {
+  flex: 15;
+}
+
+.item-1 {
+  background-image: url("../gallery/5terre-1.jpeg")
+}
+
+.item-2 {
+  background-image: url("../gallery/budapest-2.jpeg");
+}
+
+.item-3 {
+  background-image: url("../gallery/czech-1.jpeg");
+}
+
+.item-4 {
+  background-image: url("../gallery/german-1.jpeg");
+}
+
+.item-5 {
+  background-image: url("../gallery/swiss-1.jpeg");
+}
+
+.item-6 {
+  background-image: url("../gallery/holand-1.jpeg");
+}
+
+.item-7 {
+  background-image: url("../gallery/nor-1.jpeg");
 }
