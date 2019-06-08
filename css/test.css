@@ -268,29 +268,64 @@ nav ul li a:hover {
 }
 
 .item-1 {
-  background-image: url("../gallery/5terre-1.jpeg")
+  background-image: url("../gallery/5terre-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-2 {
   background-image: url("../gallery/budapest-2.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-3 {
-  background-image: url("../gallery/czech-1.jpeg");
+  background-image: url("../gallery/spain-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-4 {
   background-image: url("../gallery/german-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-5 {
   background-image: url("../gallery/swiss-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-6 {
   background-image: url("../gallery/holand-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
 
 .item-7 {
   background-image: url("../gallery/nor-1.jpeg");
+  text-align: center;
+  color: rgba(225,225,225,1);
+  font-weight: bold;
+  line-height: 190vh;
+  text-shadow: 0.1em 0.1em #333;
 }
