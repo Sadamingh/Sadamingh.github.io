@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mainpage</title>
+      <link rel="stylesheet" href="../../css/passage.css">
+      <link rel="stylesheet" href="../../css/link.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+      <div class="wrapper">
+            <header style="background: url(../../image/gre.jpg) no-repeat 50% 50%; background-size: cover;">
+                  
+                  <nav>
+
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+
+                        <div class="logo">
+                              <img src="../../image/icon.png" width="150px" height="68px"></img>
+                        </div>
+
+                        <div class="menu">
+                              <ul>
+                                    <li><a style="color: #fff;" href="../../index.html">Welcome</a></li>
+                                    <li><a style="color: #fff;" href="../../main.html">Home</a></li>
+                                    <li><a style="color: #fff;" href="../../AboutMe.html">About</a></li>
+                                    <li><a style="color: #fff;" href="../../projects.html">Projects</a></li>
+                                    <li><a style="color: #fff;" href="../../artical.html">Articles</a></li>
+                                    <li><a style="color: #fff;" href="../../gallery.html">Gallery</a></li>
+                              </ul>
+                        </div>
+                  </nav>
+
+            </header>
+
+            <div class="content">
+                  <h1 id="gre-">GRE 考试资料整理</h1>
+                  <p style="color: #757575; font-family: sans-serif; font-size: 15px;font-weight: 600;">Author: Adam&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUpdated: 09/06/2019 </p>
+                  <p>本文内容均来自于互联网，如有侵权请联系删除。</p>
+                  <h3 id="1-">1. 单词类</h3>
+                  <ul>
+                  <li><a href="../../material/voc/【01】词汇佛脚1200词.pdf">【01】词汇佛脚1200词.pdf</a></li>
+                  <li><a href="../../material/voc/【02】GRE镇考机经词6.0.pdf">【02】GRE镇考机经词6.0.pdf</a></li>
+                  <li><a href="../../material/voc/【03】六选二等价词汇总(中文版）.pdf">【03】六选二等价词汇总(中文版）.pdf</a></li>
+                  <li><a href="../../material/voc/【04】《GRE核心词汇考法精析》再要你命3000.pdf">【04】《GRE核心词汇考法精析》再要你命3000.pdf</a></li>
+                  <li><a href="../../material/voc/【05】再要你命3000助记部分.pdf">【05】再要你命3000助记部分.pdf</a></li>
+                  <li><a href="../../material/voc/【06】再要你命3000精练部分.pdf">【06】再要你命3000精练部分.pdf</a></li>
+                  </ul>
+                  <h3 id="2-">2. 填空类</h3>
+                  <ul>
+                  <li><a href="../../material/blank/【01】机经填空1000.pdf">【01】机经填空1000.pdf</a></li>
+                  <li><a href="../../material/blank/【02】机经1000答案.pdf">【02】机经1000答案.pdf</a></li>
+                  <li><a href="../../material/blank/【03】机经填空1200.pdf">【03】机经填空1200.pdf</a></li>
+                  <li><a href="../../material/blank/【04】1200填空解析.pdf">【04】1200填空解析.pdf</a></li>
+                  <li><a href="../../material/blank/【05】杨鹏长难句.pdf">【05】杨鹏长难句.pdf</a></li>
+                  </ul>
+                  <h3 id="3-">3. 阅读类</h3>
+                  <ul>
+                  <li><a href="../../material/comp/【01】kmf101阅读.pdf">【01】kmf101阅读.pdf</a></li>
+                  <li><a href="../../material/comp/【02】kmf101阅读解析.pdf">【02】kmf101阅读解析.pdf</a></li>
+                  <li><a href="../../material/comp/【03】kmf200阅读.pdf">【03】kmf200阅读.pdf</a></li>
+                  <li><a href="../../material/comp/【04】阅读机经200篇答案.pdf">【04】阅读机经200篇答案.pdf</a></li>
+                  </ul>
+                  <h3 id="4-">4. 数学类</h3>
+                  <ul>
+                  <li><a href="../../material/quant/【01】数学巍哥170题.pdf">【01】数学巍哥170题.pdf</a></li>
+                  </ul>
+                  <h3 id="5-">5. 写作类</h3>
+                  <ul>
+                  <li><a href="../../material/quant/【01】Argument.pdf">【01】Argument.pdf</a></li>
+                  <li><a href="../../material/quant/【02】Issue.pdf">【02】Issue.pdf</a></li>
+                  </ul>
+
+            </div>
+      </div>
+
+      <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+
+      </script>
+
+</body>
+</html>
